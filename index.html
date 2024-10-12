@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Instagram Photo feed with bootstrap</title>
+</head>
+<body>
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-light bg-light py-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-instagram fa-xl" style="color: #000000;" class="d-inline-block align-text-top" ></i>
+                Instagram
+              </a>
+
+              <div class="d-flex ">
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                              <div class="mb-3">
+                                <label for="message-text" class="col-form-label fw-bold">Caption:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                              </div>
+                            </form>
+                            <div class="d-flex">
+                                <button class="border px-3 rounded me-2">
+                                    <i class="fa-solid fa-camera-retro" style="color: #000000;"></i>
+                                </button>
+                                <button class="border px-3 rounded">
+                                    <i class="fa-solid fa-location-dot" style="color: #000000;"></i>
+                                </button>
+                                
+                            </div>
+                          </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="dropdown ">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear fa-xl" style="color: #ffffff;"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger " href="#">Log out</a></li>
+                  </ul>
+                </div>
+              </div>   
+            </div>  
+          </nav>
+    </div>
+    <div class="container ">
+      <nav class="mt-2 ">
+        <div class="nav nav-pills  justify-content-center" id="nav-tab" role="tablist">
+          <button class="nav-link  bg-light id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-table-cells " style="color: #5a5a5a;"></i></button>
+          <button class="nav-link  bg-light" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square  " style="color: #5a5a5a;"></i></button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="container mt-1 mb-3 p-0">
+            <div class="row g-2">
+              <div class="col-12 col-sm-6 col-md-4">
+                <img class="img-fluid" src="img/cup-of-coffee.jpg" alt="" srcset="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/56/2880/1920.jpg?hmac=BIplhYgNZ9bsjPXYhD0xx6M1yPgmg4HtthKkCeJp6Fk" class="img-fluid" alt="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/55/4608/3072.jpg?hmac=ahGhylwdN52ULB37deeMZX6T_G7NiERtoPhwydMvUKQ" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <img class="img-fluid" src="img/landscape-image.jpg" alt="" srcset="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/52/1280/853.jpg?hmac=FBJ023QL6SsJpbQl8B20ExSey3BjyRH1MOw7Uo7fIMU" class="img-fluid" alt="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/51/5000/3333.jpg?hmac=9dZb89mIRt-mPQpI_ScJAxVsNI82SFCGOuiKsvGSchY" class="img-fluid" alt="">
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                <img class="img-fluid" src="img/pasta.jpg" alt="" srcset="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/48/5000/3333.jpg?hmac=y3_1VDNbhii0vM_FN6wxMlvK27vFefflbUSH06z98so" class="img-fluid" alt="">
+              </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                <img src="https://fastly.picsum.photos/id/47/4272/2848.jpg?hmac=G8dXSLa-ngBieraQt5EORu-4r6tveX3fhvBTZM0Y8xM" class="img-fluid" alt="">
+              </div>
+            </div>
+
+        
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="d-flex flex-column align-items-center">
+            <div class="card w-50 mt-4" > 
+              <div class="d-flex justify-content-between px-2 py-2">
+                <h5 class="card-title">Some delicius pasta</h5>
+                <p>08/26</p>
+              </div>
+              <img src="img/pasta.jpg" class="img-fluid" alt="">
+              <div class="card-body">
+                <p class="fw-bold">204 Likes</p>
+                <p class="card-text">A recipe for 20 minutes food</p>
+              </div>
+            </div>
+
+            <div class="card w-50 mt-4" > 
+              <div class="d-flex justify-content-between px-2 py-2">
+                <h5 class="card-title">A road to the unknown</h5>
+                <p>08/27</p>
+              </div>
+              <img src="https://fastly.picsum.photos/id/17/2500/1667.jpg?hmac=HD-JrnNUZjFiP2UZQvWcKrgLoC_pc_ouUSWv8kHsJJY" class="img-fluid" alt="">
+              <div class="card-body">
+                <p class="fw-bold">6546 Likes</p>
+                <p class="card-text">A daily path in my life</p>
+              </div>
+            </div>
+            <div class="card w-50 mt-4" > 
+              <div class="d-flex justify-content-between px-2 py-2">
+                <h5 class="card-title">Walking down the street</h5>
+                <p>08/28</p>
+              </div>
+              <img src="https://fastly.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0" class="img-fluid" alt="">
+              <div class="card-body">
+                <p class="fw-bold">1890 Likes</p>
+                <p class="card-text">Trying to be on time!!!</p>
+              </div>
+            </div>
+
+            <div class="card w-50 mt-4 mb-4" > 
+              <div class="d-flex justify-content-between px-2 py-2">
+                <h5 class="card-title">Lighthouse in the middle of nowhere</h5>
+                <p>08/29</p>
+              </div>
+              <img src="https://fastly.picsum.photos/id/58/1280/853.jpg?hmac=YO3QnOm9TpyM5DqsJjoM4CHg8oIq4cMWLpd9ALoP908" class="img-fluid" alt="">
+              <div class="card-body">
+                <p class="fw-bold">267 Likes</p>
+                <p class="card-text">What I found in my last trip to Portugal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
